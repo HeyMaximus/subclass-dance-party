@@ -5,11 +5,14 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("graphics/bg.jpg");
+  background-size: 100% auto;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .button{
   padding:5px 12px;
   float:right;
 }
@@ -26,7 +29,46 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .growydancer{
-  border:10px solid black;
+  border:30px solid black;
   border-radius:10px;
+  /* animation: rotation 10s infinite linear; */
   position:absolute;
+}
+@keyframes rotation {
+  0%{
+     transform: rotate(0deg);
+    }
+ 100%{
+     transform: rotate(360deg);
+    }
+ }
+ .mousedancer{
+  animation-name: shrink;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: yellow;
+  background-color: yellow;
+  position: absolute;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+@keyframes shrink {
+  from {
+    /* background-color: yellow; */
+    width: 30px;
+    height: 30px;
+  }
+  to {
+    /* background-color: yellow; */
+    width: 10px;
+    height: 10px;
+  }
 }
